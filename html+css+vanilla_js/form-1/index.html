@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+	<div class="form-container centered" id="form-container">
+		<ul class="options-group centered" id="options-group">
+			<li class="signup-option option" id="signup-button">Sign Up</li><li class="login-option option" id="login-button">Log In</li>
+			<span id="active"></span>
+		</ul>
+
+		<div class="sign-up-div" id="sign-up-div"> 
+			
+			<div class="profile-div">
+				<label for="file">
+					<img src="plus-icon.png" class="plus-icon">
+					<span class="overlay"></span>
+				</label>
+				<img src="blank-profile-picture-973460_960_720.webp" alt="" class="icon" id="signup-icon">
+			</div>
+
+			<input type="file" id="file">
+
+
+			<div class="form-field-div centered name-placeholder">
+				<input type="text" name="" class="form-field"> 
+			</div> 
+			<div class="form-field-div centered username-placeholder">
+				<input type="text" name="" class="form-field"> 
+			</div>
+			<div class="form-field-div centered password-placeholder">
+				<input type="password" name="" class="form-field"> 
+			</div> 
+			<div class="form-field-div centered retype-password-placeholder">
+				<input type="password" name="" class="form-field"> 
+			</div>
+			<div class="submit-button-div centered">
+				<button type="submit" class="submit-btn">Sign Up</button>
+			</div>
+
+		</div>
+
+		<div class="log-in-div" id="log-in-div"> 
+			<div class="profile-div">
+				<img src="blank-profile-picture-973460_960_720.webp" alt="" class="icon" id="login-icon">
+			</div>
+				
+			<div class="form-field-div centered username-placeholder">
+				<input type="text" name="" class="form-field" id="login-username"> 
+			</div>
+			<div class="form-field-div centered password-placeholder">
+				<input type="password" name="" class="form-field" id="login-password"> 
+			</div> 
+			
+			<div class="submit-button-div centered">
+				<button type="submit" class="submit-btn">Log In</button>
+			</div>
+
+			<p class="reset-link-text"><a href="" id="reset-open" class="reset-link">Reset Your Password</a></p>
+
+		</div>
+
+		<div class="reset-password-div" id="reset-password-div"> 
+			<div class="profile-div">
+				<img src="blank-profile-picture-973460_960_720.webp" alt="" class="icon" id="reset-icon">
+			</div>
+				
+			<div class="form-field-div centered username-placeholder">
+				<input type="text" name="" class="form-field" id="reset-username"> 
+			</div>
+			
+			<div class="submit-button-div centered">
+				<button type="submit" class="submit-btn">Request Password</button>
+			</div>
+
+			<p class="reset-link-text"><a href="#" id="reset-close" class="reset-link">Go Back!</a></p>
+
+		</div>
+
+	</div>
+
+</body>
+</html>
+
+<script>
+	document.getElementById("signup-button").addEventListener('click', function(event)
+	{
+		document.getElementById("active").style.left="0%";
+		document.getElementById("active").style.transform="scale(1, 1)";
+		document.getElementById("log-in-div").style.display="none";
+		document.getElementById("sign-up-div").style.display="block";
+	});
+	document.getElementById("login-button").addEventListener('click', function(event)
+	{
+		document.getElementById("active").style.left="50%";
+		document.getElementById("active").style.transform="scale(-1, -1)";	
+		document.getElementById("sign-up-div").style.display="none";
+		document.getElementById("log-in-div").style.display="block";
+	});
+	document.getElementById("reset-open").addEventListener('click', function(event)
+	{
+		event.preventDefault();
+
+		document.getElementById("options-group").style.display="none";
+		document.getElementById("log-in-div").style.display="none";
+		document.getElementById("reset-password-div").style.display="block";
+	});
+	document.getElementById("reset-close").addEventListener('click', function(event)
+	{
+		event.preventDefault();
+
+		document.getElementById("options-group").style.display="block";
+		document.getElementById("log-in-div").style.display="block";
+		document.getElementById("reset-password-div").style.display="none";
+	});
+	document.getElementById("login-username").addEventListener('input', function(event)
+	{
+		if(document.getElementById("login-username").value == "ritik" && document.getElementById("login-password").value == "ritik")
+		{
+			document.getElementById("login-icon").src = "ritik.jpg";
+			document.body.style.backgroundColor = "#0AD48B";				
+		}
+		else
+		{
+			document.getElementById("login-icon").src = "blank-profile-picture-973460_960_720.webp";
+			document.body.style.backgroundColor = "#C0C0C0";				
+		}
+	});
+	document.getElementById("login-password").addEventListener('input', function(event)
+	{
+		if(document.getElementById("login-username").value == "ritik" && document.getElementById("login-password").value == "ritik")
+		{
+			document.getElementById("login-icon").src = "ritik.jpg";
+			document.body.style.backgroundColor = "#0AD48B";
+		}
+		else
+		{
+			document.getElementById("login-icon").src = "blank-profile-picture-973460_960_720.webp";
+			document.body.style.backgroundColor = "#C0C0C0";
+		}
+	});
+	document.getElementById("file").addEventListener('input', function(event)
+	{
+		document.getElementById("signup-icon").src = URL.createObjectURL(event.target.files[0]);
+	});
+	document.getElementById("reset-username").addEventListener('input', function(event)
+	{
+		if(document.getElementById("reset-username").value == "ritik")
+			document.getElementById("reset-icon").src = "ritik.jpg";
+		else
+			document.getElementById("reset-icon").src = "blank-profile-picture-973460_960_720.webp";
+	});
+
+</script>
