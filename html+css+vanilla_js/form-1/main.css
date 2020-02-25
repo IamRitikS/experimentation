@@ -1,0 +1,308 @@
+body
+{
+	background-color: #C0C0C0;
+	font-family: "Segoe UI";
+}
+.centered
+{
+	float: none;
+	margin: 0 auto;
+}
+
+.form-container
+{
+	text-align: center;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	background-color: #808080;
+	margin-top: 20%!important;
+	margin-bottom: 20%!important;
+	padding: 10em 0 2em 0;
+	border-radius: 3em;
+	-webkit-box-shadow: 10px 10px 20px -16px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 20px -16px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 20px -16px rgba(0,0,0,0.75);
+	transition: all 0.3s ease-in-out;
+}
+
+.profile-div
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	position: absolute;
+	top: -5em;
+}
+.icon
+{
+	pointer-events: none;
+	position: relative;
+	box-sizing: content-box;
+	border: solid 0.8em #C0C0C0;
+	border-radius: 50%;
+	object-fit: cover;
+	width: 8em;
+	height: 8em;
+}
+input[type=file]
+{
+	position: absolute;
+	left: -9999px;
+	visibility: hidden;
+}
+.plus-icon
+{	
+	position: absolute;
+	top: 6em;
+	left: 54%;
+	z-index: 100;
+	width: 2.5em;
+	height: 2.5em;
+	background-color: white;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.overlay
+{
+	position: absolute;
+	top: 6em;
+	left: 54%;
+	z-index: 100;
+	width: 2.5em;
+	height: 2.5em;
+	background-color: white;
+	border-radius: 50%;
+	cursor: pointer;
+	opacity: 0;
+	transform: scale(0);
+	transition: all 0.2s ease-in-out;
+}
+.plus-icon:hover + .overlay
+{
+	transform: scale(1);
+	opacity: 0.6;
+}
+.overlay:hover
+{
+	transform: scale(1);
+	opacity: 0.6;
+}
+
+.options-group
+{
+	position: relative;
+	box-sizing: border-box;
+	width: 60%;
+	list-style: none;
+	margin-bottom: 4em;
+	padding: 0;
+}
+.option
+{
+	background-color: #0AD48B;
+	display: inline-block;
+	text-align: center;
+	width: 50%;
+	font-weight: 600;
+	color: #505050;
+	padding: 1em 0;
+	cursor: pointer;
+}
+.signup-option
+{
+	border-radius: 1em 0 0 1em;
+}
+.login-option
+{
+	border-radius: 0 1em 1em 0;
+}
+#active
+{
+	position: absolute;
+	content: " ";
+	width: 50%;
+	height: 100%;
+	background-color: green;
+	left: 0%;
+	top: 0;
+	border-radius: 1em;
+	opacity: 0.3;
+	transition: all 0.5s;
+	transition-timing-function: cubic-bezier(0, 0.9, 0.58, 1);
+	-webkit-box-shadow: 10px 1px 12px -2px rgba(130,130,130,1);
+	-moz-box-shadow: 10px 1px 12px -2px rgba(130,130,130,1);
+	box-shadow: 10px 1px 12px -2px rgba(130,130,130,1);
+}
+
+.form-field-div
+{
+	width: 60%;
+}
+
+.form-field
+{
+	text-align: center;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	background-color: #C0C0C0;
+	border-radius: 1em;
+	width: 100%;
+	font-size: 1em;
+	color: #707070;
+	padding: 1em;
+	margin: 1.5em 0;
+	-webkit-box-shadow: 3px 3px 9px -1px rgba(0,0,0,0.20);
+	-moz-box-shadow: 3px 3px 9px -1px rgba(0,0,0,0.20);
+	box-shadow: 3px 3px 9px -1px rgba(0,0,0,0.20);
+}
+
+.username-placeholder
+{
+	position: relative;
+}
+.username-placeholder:before
+{
+	position: absolute;
+	top: -0.5em;
+	left: 1em;
+	content: "USERNAME";
+	display: block;
+	font-size: 1em;
+	font-weight: 500;
+	color: #C0C0C0;
+}
+
+.password-placeholder
+{
+	position: relative;
+}
+.password-placeholder:before
+{
+	position: absolute;
+	top: -0.5em;
+	left: 1em;
+	content: "PASSWORD";
+	display: block;
+	font-family: "Segoe UI";
+	font-size: 1em;
+	font-weight: 500;
+	color: #C0C0C0;
+}
+
+.name-placeholder
+{
+	position: relative;
+}
+.name-placeholder:before
+{
+	position: absolute;
+	top: -0.5em;
+	left: 1em;
+	content: "FULL NAME";
+	display: block;
+	font-family: "Segoe UI";
+	font-size: 1em;
+	font-weight: 500;
+	color: #C0C0C0;
+}
+
+.retype-password-placeholder
+{
+	position: relative;
+}
+.retype-password-placeholder:before
+{
+	position: absolute;
+	top: -0.5em;
+	left: 1em;
+	content: "RETYPE PASSWORD";
+	display: block;
+	font-family: "Segoe UI";
+	font-size: 1em;
+	font-weight: 500;
+	color: #C0C0C0;
+}
+
+.reset-link
+{
+	position: relative;
+	display: inline-block;
+	margin-bottom: 2em;
+	text-decoration: none;
+	font-size: 1.3em;
+	color: #4B4C4C;
+}
+.reset-link::before
+{
+	content: "";
+	width: 20%;
+	height: 0.04em;
+	position: absolute;
+	bottom: -0.3em;
+	left: 0;
+	display: block;
+	background-color: black;
+	transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.reset-link:hover::before
+{
+	width: 100%;
+}
+.reset-link:hover
+{
+	font-weight: 500;
+}
+
+.submit-button-div
+{
+	width: 20%;
+}
+.submit-btn
+{
+	width: 100%;	
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	border-radius: 0.5em;
+	padding: 0.6em 0;
+	font-size: 1.2em;
+	font-weight: 500;
+	color: #808080;
+	background-color: #C0C0C0;
+	cursor: pointer;
+	transition: background-color 0.5s ease-in-out;
+}
+.submit-btn:hover
+{
+	background-color: #0AD48B;
+}
+
+.log-in-div
+{
+	display: none;
+}
+.sign-up-div
+{
+	display: block;
+}
+.reset-password-div
+{
+	display: none;
+}
+
+@media (max-width:720px)
+{
+	.form-container
+	{
+		width: 100%!important;
+	}
+	.form-field-div,.options-group
+	{
+		width: 70%;
+	}
+}
