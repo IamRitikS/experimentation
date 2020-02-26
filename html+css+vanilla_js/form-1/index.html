@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login | Signup | Reset Password - Form</title>
+	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
@@ -121,12 +121,14 @@
 		if(document.getElementById("login-username").value == "mark" && document.getElementById("login-password").value == "mark")
 		{
 			document.getElementById("login-icon").src = "mark.jpg";
-			document.body.style.backgroundColor = "#0AD48B";				
+			document.body.style.backgroundColor = "#0AD48B";
+			document.getElementById("login-icon").style.border = "solid 0.8em #0AD48B;";		
 		}
 		else
 		{
 			document.getElementById("login-icon").src = "blank-profile-picture-973460_960_720.webp";
-			document.body.style.backgroundColor = "#C0C0C0";				
+			document.body.style.backgroundColor = "#C0C0C0";
+			document.getElementById("login-icon").style.border = "solid 0.8em #C0C0C0;";
 		}
 	});
 	document.getElementById("login-password").addEventListener('input', function(event)
@@ -135,11 +137,13 @@
 		{
 			document.getElementById("login-icon").src = "mark.jpg";
 			document.body.style.backgroundColor = "#0AD48B";
+			document.getElementById("login-icon").style.border = "solid 0.8em #0AD48B";
 		}
 		else
 		{
 			document.getElementById("login-icon").src = "blank-profile-picture-973460_960_720.webp";
 			document.body.style.backgroundColor = "#C0C0C0";
+			document.getElementById("login-icon").style.border = "solid 0.8em #C0C0C0;";
 		}
 	});
 	document.getElementById("file").addEventListener('input', function(event)
