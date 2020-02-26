@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="header-container">
+			<div class="info-icon-div">
+				<img src="info-icon.png" alt="Find more info about this page" class="info-icon" id="info-btn">
+				<span class="overlay" id="overlay"></span>
+			</div>
+			<h1 class="title">Projects</h1>
+		</div>
+		<div class="content-container">
+			<a href="../form/index.html" class="link">
+				<img src="icons8-burn-folder-80.png" class="link-icon">
+				<p class="link-text">HTML+CSS+Javascript</p>
+			</a>
+		</div>
+	</div>
+
+	<div class="popup-notice" id="popup-notice">
+		<div class="popup-notice-msg" id="popup-notice-msg">
+			This index contains many different types of technologies that I have used to create muliple projects for fun or for learning. If you want to use any design from here, feel free to copy and paste the source code, which is available on github. No need to give any kind of credit. If you like what you see, feel free to give me a star.
+		</div>
+		<div class="popup-notice-btn">
+			<button type="button" class="popup-notice-cls-btn" id="popup-notice-cls-btn" onclick="closePopUpNotice();">Okay</button>
+		</div>
+	</div>
+
+</body>
+</html>
+<script type="text/javascript">
+	document.getElementById('info-btn').addEventListener('click', function(event)
+	{
+		showPopUpNotice();
+	});
+	document.getElementById('overlay').addEventListener('click', function(event)
+	{
+		showPopUpNotice();
+	});
+	
+	function showPopUpNotice()
+	{
+		document.getElementById('container').classList.add("blurr");
+		document.getElementById('popup-notice').style.visibility="visible";
+		document.getElementById('popup-notice').style.opacity="1";
+	}
+
+	function closePopUpNotice()
+	{
+		document.getElementById('container').classList.remove("blurr");
+		document.getElementById('popup-notice').style.visibility="hidden";
+		document.getElementById('popup-notice').style.opacity="0";
+	}
+</script>
