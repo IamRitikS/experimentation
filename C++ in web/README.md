@@ -18,3 +18,6 @@ List of technologies that I have worked on and listed here
   
 #### libmysqlcppconn.so
   It is MySQL connector library for C++. Without it, connecting C++ code to database seemed impossible.
+
+#### AWS
+  Project's working code is hosted on AWS. Seemed like the best free solution that supported C++ as CGI. Visit http://3.6.206.13/
