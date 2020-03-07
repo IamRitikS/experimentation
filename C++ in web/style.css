@@ -1,0 +1,102 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	font-family: 'PT Sans';
+	background-color: #D8D8D8;
+	font-size: 1em;
+}
+.canvas-body
+{
+	overflow: hidden!important;
+}
+.centered
+{
+	margin: 2em auto;
+	text-align: center;
+}
+input
+{
+	box-sizing: border-box;
+	width: 60%;
+	padding: 1em;
+	border-radius: 1em;
+	text-align: center;
+	outline: none;
+	border: solid 1px grey;
+	margin: 1em;
+	transition: all 0.1s ease-in;
+}
+input:focus
+{
+	webkit-box-shadow: 2px 4px 23px 4px rgba(0,0,0,0.27);
+	-moz-box-shadow: 2px 4px 23px 4px rgba(0,0,0,0.27);
+	box-shadow: 2px 4px 23px 4px rgba(0,0,0,0.27);
+	width: 90%;
+}
+button
+{
+	box-sizing: border-box;
+	margin-top: 2em;
+	cursor: pointer;
+	outline: none;
+	border: solid 0.2em #B7B7B7;
+	padding: 0.5em 1.5em;
+	border-radius: 1em;
+}
+button:hover
+{
+	background-color: #B7B7B7;
+}
+p
+{
+	margin: 1em;
+	font-weight: 600;
+}
+a
+{
+	text-decoration: none;
+	color: #4F8EF1;
+	font-size: 1.2em;
+}
+a:hover
+{
+	color: #006CD4;
+}
+
+input[name='firstName']
+{
+	width: 28%;
+}
+input[name='lastName']
+{
+	width: 28%;
+}
+input[name='firstName']:focus
+{
+	width: 40%;
+}
+input[name='lastName']:focus
+{
+	width: 40%;
+}
+
+canvas
+{
+	position: absolute;
+	background: #D8D8D8;
+	z-index: -1;
+}
+.title
+{
+	position: absolute;
+	left: 1.5vw;
+	top: 1.5vw;
+	font-size: 1.5vw;
+	font-weight: bold;
+	background-color: #FEFEFE;
+	border-radius: 1vw;
+	padding: 0.5vw 1vw;
+}
