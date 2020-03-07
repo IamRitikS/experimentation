@@ -3,7 +3,7 @@ This directory contains a rough project that emphises on using C++ as web backen
 
 ## Link to see this project working on AWS - http://3.6.206.13/
 
-## Technologies
+## Used Technologies
 
 List of technologies that I have worked on and listed here
 
