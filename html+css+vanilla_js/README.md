@@ -2,8 +2,7 @@
 
 This directory contains all the different types of small projects or UI chanllenges that I have picked up over the internet or just designed on my own. Projetcs listed here are not using any kind of libary or framework of any sort such as jquery or bootstrap.
 
-## Link to see this page in GUI - https://iamritiks.github.io/experiementation/html%2Bcss%2Bvanilla_js/index.html
-
+## Link to see this page in GUI - https://iamritiks.github.io/experimentation/html%2Bcss%2Bvanilla_js/index.html
 ## Projects
 
 #### Form 1
