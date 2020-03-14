@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Profile Card</title>
+      <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <article id='article'>
+      <figure>
+        <img src="pete.jpg" />
+      </figure>
+      <div>
+          <h2>
+              The best hitman west of the Mississippi
+          </h2>
+          <p>
+              Being hitman is not easy, competition is killing, yo
+              <br>
+              Don't become a hitman, rent me, Heisenberg's former partner.
+              <br>
+          </p>
+          <h1>
+              Skinny Pete
+          </h1>
+          <a href="mailto:someone@example.com">Rent me</a>
+      </div>
+    </article>
+  </body>
+</html>
+
+<script type="text/javascript">
+
+//Variables area
+const article = document.getElementById('article');
+const {x, y, width, height} = article.getBoundingClientRect();
+const cx = x + width / 2;
+const cy = y + height / 2;
+
+//Event listeners area
+article.addEventListener('mousemove', function(event)
+{
+  const {pageX, pageY} = event;
+  const dx = (cx - pageX) / (width / 2);
+  const dy = (cy - pageY) / (height / 2);
+
+  this.style.transform = `rotateX(${10 * dy * -1}deg) rotateY(${10 * dx}deg)`;
+});
+article.addEventListener('mouseout', function(event)
+{
+  this.style.transform = 'initial';
+});
+
+</script>
