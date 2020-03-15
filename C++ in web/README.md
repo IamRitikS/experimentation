@@ -5,8 +5,7 @@ This directory contains a rough project that emphises on using C++ as web backen
 
 ## Used Technologies
 
-List of technologies that I have worked on and listed here
-
+List of technologies that I have used for this project
 #### HTML+CSS
   HTML and CSS only to design basic front end page. Although all pages are displayed using CGI script.
 
