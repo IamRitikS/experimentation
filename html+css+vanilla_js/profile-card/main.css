@@ -117,8 +117,10 @@ a
 {
   font-family: "Lato", sans-serif;
   text-decoration: none;
-  background-color: #0AD48B;
-  color: #FFFFFF;
+	color: #808080;
+	background-color: #C0C0C0;
+	cursor: pointer;
+	transition: background-color 0.5s ease-in-out;
   margin-top: 1em;
   padding: 0.5em;
   border-radius: 0.5em;
@@ -126,6 +128,5 @@ a
 
 a:hover
 {
-  background-color: #5BA0B7;
-  color:#374047;
+	background-color: #0AD48B;
 }
