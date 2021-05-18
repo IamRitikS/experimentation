@@ -1,7 +1,6 @@
 # C++ in Web
 This directory contains a rough project that emphises on using C++ as web backend and front end language.
 
-## Link to see this project working on AWS - http://3.6.206.13/
 
 ## Used Technologies
 
@@ -17,6 +16,3 @@ List of technologies that I have used for this project
   
 #### libmysqlcppconn.so
   It is MySQL connector library for C++. Without it, connecting C++ code to database seemed impossible.
-
-#### AWS
-  Project's working code is hosted on AWS. Seemed like the best free solution that supported C++ as CGI. Visit http://3.6.206.13/
